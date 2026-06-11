@@ -4,23 +4,35 @@ const fs = require('fs')
 
 const server = http.createServer((req, res) => {
     if (req.url === "/" && req.method === "GET") {
-        res.write("Hello World from HTTP Node JS!")
-    } else if (req.url === "/home" && req.method === "GET") {
-        res.write("Home")
-    } else if(req.url == "/contact" && req.method === "GET"){
-        res.write("Contact")
-    } else if(req.url === "/about" && req.method === "GET"){
-        fs.readFile('test.html', (err, data)=>{
+        fs.readFile('index.html', (err, data) => {
             res.writeHead(200, {
-                'Content-Type' : 'text/html'
+                'Content-Type': 'text/html'
             })
             res.write(data)
             res.end()
         })
         return
-    }else{
-        res.writeHead(404,{
-            'Content-Type' : 'text/html'
+    } else if (req.url == "/contact" && req.method === "GET") {
+        fs.readFile('contact.html', (err, data) => {
+            res.writeHead(200, {
+                'Content-Type': 'text/html'
+            })
+            res.write(data)
+            res.end()
+        })
+        return
+    } else if (req.url === "/home" && req.method === "GET") {
+        fs.readFile('test.html', (err, data) => {
+            res.writeHead(200, {
+                'Content-Type': 'text/html'
+            })
+            res.write(data)
+            res.end()
+        })
+        return
+    } else {
+        res.writeHead(404, {
+            'Content-Type': 'text/html'
         })
 
         res.write(`
