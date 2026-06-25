@@ -30,5 +30,5 @@
     git add . && git commit -m "Your message here" && git push origin main
     ```
 
-## Cara Run file js menggunakan node
+## Cara Run file js menggunakan node    
 node --watch nama_file.js
