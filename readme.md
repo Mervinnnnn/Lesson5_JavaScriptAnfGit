@@ -32,3 +32,17 @@
 
 ## Cara Run file js menggunakan node    
 node --watch nama_file.js
+
+# Cara pindah tempat dari satu file ke file lain
+    ```
+    cd ..
+    ```
+
+# HOW TO CLONE GITHUB PROJECT
+1. Open folder in your laptop (Whatever you choose)
+2. Open repisitory on github choose one project, click code, click ssh, copy the link
+3. Syntax
+    ```
+    git clone <your_url_repository>
+    ```
+3. edit .env.example , copy and delete .example
